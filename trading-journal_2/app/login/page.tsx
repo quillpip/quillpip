@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { suspense,useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
-export default function LoginPage() {
+function Loginform() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -70,4 +70,9 @@ export default function LoginPage() {
       </p>
     </main>
   );
+}
+export default function LoginPage() {
+return (
+
+);
 }
